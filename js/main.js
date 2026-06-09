@@ -1,7 +1,7 @@
 // ==========================================
 // CONFIGURAÇÕES E SELETORES
 // ==========================================
-const API_KEY = '51255cd87a945322888259466c0bcf6e'; // <-- Cole sua chave do OpenWeatherMap aqui (mantenha as aspas)
+const API_KEY = 'e88422244b1aee48e6cdd7e4d45e33c2'; // <-- Cole sua chave do OpenWeatherMap aqui (mantenha as aspas)
 
 const form = document.getElementById('form-busca');
 const input = document.getElementById('input-cidade');
