@@ -1,0 +1,204 @@
+/* ==========================================
+   VARIÁVEIS DE CORES
+   ========================================== */
+:root {
+  --bg-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --color-surface: #ffffff;
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+  --color-primary: #0ea5e9;
+  --color-primary-hover: #0284c7;
+  --color-error-bg: #fee2e2;
+  --color-error-text: #ef4444;
+  --color-border: #e2e8f0;
+  --radius: 20px;
+  --font-sans: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ==========================================
+   RESET GLOBAL
+   ========================================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-gradient);
+  color: var(--color-text-main);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ==========================================
+   CARD PRINCIPAL
+   ========================================== */
+.card {
+  background-color: var(--color-surface);
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transition: height 0.3s ease;
+}
+
+/* ==========================================
+   FORMULÁRIO DE BUSCA
+   ========================================== */
+.form-busca {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.form-busca input {
+  flex: 1;
+  padding: 0.85rem 1.2rem;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  color: var(--color-text-main);
+  background-color: #f8fafc;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-busca input:focus {
+  border-color: var(--color-primary);
+}
+
+.form-busca button {
+  width: 50px;
+  border-radius: 12px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.form-busca button:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESULTADO DO CLIMA
+   ========================================== */
+.clima-resultado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.clima-principal {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.clima-principal img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  /* Filtro suave para destacar o ícone se for claro */
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.temperatura-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.temperatura {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-main);
+}
+
+.descricao {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+  margin-top: 0.25rem;
+}
+
+.cidade {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ==========================================
+   DETALHES EXTRAS (Umidade, Sensação, Vento)
+   ========================================== */
+.detalhes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.detalhe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.detalhe i {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+}
+
+.detalhe span {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-main);
+}
+
+.detalhe small {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================
+   MENSAGEM DE ERRO
+   ========================================== */
+.erro {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ==========================================
+   CLASSES UTILITÁRIAS
+   ========================================== */
+.escondido {
+  display: none !important;
+}

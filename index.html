@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <form class="form-busca" id="form-busca">
+          <input
+            type="text"
+            id="input-cidade"
+            placeholder="Digite uma cidade..."
+            autocomplete="off"
+          />
+          <button type="submit" aria-label="Buscar cidade">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+        <div class="clima-resultado escondido" id="clima-resultado">
+          <div class="clima-principal">
+            <img id="icone-clima" src="" alt="" />
+            <div class="temperatura-wrapper">
+              <span id="temperatura" class="temperatura">--°C</span>
+              <span id="descricao" class="descricao">--</span>
+            </div>
+          </div>
+
+          <h2 id="cidade" class="cidade">--</h2>
+
+          <div class="detalhes">
+            <div class="detalhe">
+              <i class="fa-solid fa-droplet"></i>
+              <span id="umidade">--%</span>
+              <small>Umidade</small>
+            </div>
+            <div class="detalhe">
+              <i class="fa-solid fa-temperature-half"></i>
+              <span id="sensacao">--°C</span>
+              <small>Sensação</small>
+            </div>
+            <div class="detalhe">
+              <i class="fa-solid fa-wind"></i>
+              <span id="vento">-- km/h</span>
+              <small>Vento</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="erro escondido" id="erro">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <p>Cidade não encontrada. Tente novamente.</p>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
