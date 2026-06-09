@@ -13,9 +13,9 @@ Aplicativo de previsão do tempo desenvolvido com HTML, CSS e JavaScript puro, c
 
 ## 🛠️ Tecnologias
 
-* HTML5
-* CSS3
-* JavaScript (ES6+, async/await, Fetch API)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 * OpenWeatherMap API
   
 ## 📁 Estrutura
